@@ -1,4 +1,4 @@
-(set-default-font "basis33" 12)
+(set-default-font "basis33")
 (set-face-attribute 'default nil :height 120)
 
 (require 'package)
