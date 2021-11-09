@@ -1,4 +1,5 @@
-(set-default-font "CodingFontTobi-12")
+(set-default-font "basis33" 12)
+(set-face-attribute 'default nil :height 120)
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
