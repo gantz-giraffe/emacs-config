@@ -1,10 +1,31 @@
 (set-frame-font "basis33")
-(set-face-attribute 'default nil :height 125)
+(set-face-attribute 'default nil :height 120)
 
 (require 'package)
 (add-to-list 'package-archives
              '("melpa-stable" . "https://melpa.org/packages/") t)
 
+;;;shut up!!
+(setq visible-bell 1)
+
+;;;;;;;;;;;;;;;;;;;;;;;; aesthetics
+(scroll-bar-mode -1)
+(line-number-mode 1)
+(column-number-mode 1)
+(global-tab-line-mode 1)
+
+
+;------------modeline
+(require 'telephone-line)
+(telephone-line-mode 1)
+;-------------doom
+(require 'doom-themes)
+	     (setq doom-themes-enable-bold t
+	           doom-themes-enable-italic t)
+(load-theme 'doom-city-lights t)
+
+;---------rainbow delimiters
+ (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;; general utility
 (recentf-mode 1)
@@ -75,24 +96,9 @@
 (global-set-key (kbd "C-z") 'undo-fu-only-undo)
 (global-set-key (kbd "C-S-z") 'undo-fu-only-redo)
 
-;;;;;;;;;;;;;;;;;;;;;;;; aesthetics
-(scroll-bar-mode -1)
-(line-number-mode 1)
-(column-number-mode 1)
-(global-tab-line-mode 1)
 
 
-;------------modeline
-(require 'telephone-line)
-(telephone-line-mode 1)
-;-------------doom
-(require 'doom-themes)
-	     (setq doom-themes-enable-bold t
-	           doom-themes-enable-italic t)
-(load-theme 'doom-city-lights t)
 
-;---------rainbow delimiters
- (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
